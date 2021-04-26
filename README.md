@@ -8,6 +8,8 @@
 - [TypeScript: template](https://github.com/actions/typescript-action)
 - [Typescirpt: main](https://github.com/microsoft/TypeScript)
 
+- [Github Actions Debug](https://github.com/actions/toolkit/blob/master/docs/action-debugging.md)
+
 <!-- resouces -->
 [build-badge]: https://github.com/workflow-actions/first-action/actions/workflows/test.yml/badge.svg
 [build-yml]: https://github.com/workflow-actions/first-action/actions/workflows/test.yml

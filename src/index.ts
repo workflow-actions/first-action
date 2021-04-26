@@ -5,7 +5,7 @@ import {inspect} from 'util'
 async function run(): Promise<void> {
   try {
     const inputs = new Input().inputs
-    core.debug(`Inputs: ${inspect(inputs)}`)
+    core.info(`Inputs: ${inspect(inputs)}`)
     const name: string = inputs.name.value
 
     if (name) {
