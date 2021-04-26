@@ -11,7 +11,7 @@ on:
         default: true
       publish:
         description: Publish release
-        required: true
+        required: false
         default: false
 
 jobs:
