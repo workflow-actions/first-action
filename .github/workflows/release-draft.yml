@@ -5,8 +5,12 @@ on:
     branches: [$default-branch]
   workflow_dispatch:
     inputs:
-      releaseIt:
-        description: Release code or not
+      prerelease:
+        description: Is this a pre-release
+        required: true
+        default: true
+      publish:
+        description: Publish is
         required: true
         default: false
 
@@ -20,9 +24,12 @@ jobs:
         id: release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          publish: ${{ github.event.inputs.publish }}
+          prerelease: ${{ github.event.inputs.prerelease }}
 
       - name: check-version
         run: |
-          echo "release it: ${{ github.event.inputs.releaseIt }}"
+          echo "release it: ${{ github.event.inputs.prerelease }}"
           echo "name: $(steps.release.outputs.name)"
           echo "tag: $(steps.release.outputs.tag_name)"

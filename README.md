@@ -10,6 +10,10 @@
 
 - [Github Actions Debug](https://github.com/actions/toolkit/blob/master/docs/action-debugging.md)
 
+## TODO
+
+- [ ] Create PR with latest `dist/index.js`
+
 <!-- resouces -->
 [build-badge]: https://github.com/workflow-actions/first-action/actions/workflows/test.yml/badge.svg
 [build-yml]: https://github.com/workflow-actions/first-action/actions/workflows/test.yml

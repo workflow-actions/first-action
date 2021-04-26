@@ -35,7 +35,8 @@ const util_1 = __nccwpck_require__(669);
 async function run() {
     try {
         const inputs = new input_1.default().inputs;
-        core.debug(`Inputs: ${util_1.inspect(inputs)}`);
+        core.info(`Inputs: ${util_1.inspect(inputs)}`);
+        console.log(`From console  ${util_1.inspect(inputs)}`);
         const name = inputs.name.value;
         if (name) {
             core.debug(`Hello ${name}!`);

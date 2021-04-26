@@ -6,6 +6,7 @@ async function run(): Promise<void> {
   try {
     const inputs = new Input().inputs
     core.info(`Inputs: ${inspect(inputs)}`)
+    console.log(`From console  ${inspect(inputs)}`)
     const name: string = inputs.name.value
 
     if (name) {

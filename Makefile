@@ -24,6 +24,7 @@ install: ## Install module dependencies
 
 build: ## Run build
 	@npm run build
+	@npm run pack
 
 open: ## Open repository
 	@open $(shell git config --get remote.origin.url)
