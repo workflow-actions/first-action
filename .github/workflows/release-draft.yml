@@ -32,5 +32,5 @@ jobs:
       - name: check-version
         run: |
           echo "release it: ${{ github.event.inputs.prerelease }}"
-          echo "name: $(steps.release.outputs.name)"
-          echo "tag: $(steps.release.outputs.tag_name)"
+          echo "name: ${{ steps.release.outputs }}"
+          echo "tag: ${{ steps.release.outputs.tag_name }}"
