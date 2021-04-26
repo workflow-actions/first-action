@@ -10,7 +10,7 @@ on:
         required: true
         default: true
       publish:
-        description: Publish is
+        description: Publish release
         required: true
         default: false
 
