@@ -1,10 +1,11 @@
 SHELL := /bin/bash
 .ONESHELL:
+.EXPORT_ALL_VARIABLES:
 .SHELLFLAGS := -eu -o pipefail -c
 MAKEFLAGS += --warn-undefined-variables
 MAKEFLAGS += --no-builtin-rules
 
-export DRY_RUN ?= true
+INPUT_NAME ?= ivanka
 
 help:
 	@printf "Usage: make [target] [VARIABLE=value]\nTargets:\n"
@@ -17,3 +18,13 @@ hooks: ## Setup pre commit.
 
 validate: ## Validate files with pre-commit hooks
 	@pre-commit run --all-files
+
+install: ## Install module dependencies
+	@npm install
+
+build: ## Run build
+	@npm run build
+
+# run: build
+run: ## Run action locally
+	@npm run exec

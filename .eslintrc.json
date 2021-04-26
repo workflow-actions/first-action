@@ -19,6 +19,15 @@
     "@typescript-eslint"
   ],
   "rules": {
+    "max-len": [
+      "error",
+      {
+        "code": 120,
+        "ignoreUrls": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreTrailingComments": true
+      }
+    ],
     "block-spacing": [
       "error",
       "always"
