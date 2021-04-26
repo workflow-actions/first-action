@@ -1,6 +1,6 @@
-name: 'Github Action Template'
+name: 'Github Action Accelerator Template'
 description: 'simple typescript template for building GitHub Actions'
-author: 'notiz.dev'
+author: ivankatliarchuk
 inputs:
   name:
     description: 'input description here'

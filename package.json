@@ -1,7 +1,7 @@
 {
   "name": "first-action",
   "version": "0.0.1",
-  "description": "Create first github action",
+  "description": "TypeScript template/accelerator action",
   "main": "lib/index.js",
   "scripts": {
     "test:unit": "jest unit",
@@ -9,7 +9,7 @@
     "lint": "eslint src/**/*.ts",
     "format-check": "prettier --check '**/*.ts'",
     "trash": "&& ncc build lib/main.js",
-    "build": "tsc && ncc build",
+    "build": "tsc && ncc build -o dist",
     "format": "prettier --write **/*.ts",
     "exec": "node lib/index.js"
   },

@@ -7,6 +7,7 @@ async function run(): Promise<void> {
     const inputs = new Input().inputs
     core.debug(`Inputs: ${inspect(inputs)}`)
     const name: string = inputs.name.value
+
     if (name) {
       core.debug(`Hello ${name}!`)
 
@@ -14,6 +15,7 @@ async function run(): Promise<void> {
       core.setOutput('time', new Date().toUTCString())
       return core.setOutput('my_output', `Hello ${name}!`)
     }
+
     core.setFailed('name not specified!')
   } catch (error) {
     core.setFailed(`Action failed with error ${error}`)
