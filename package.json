@@ -11,7 +11,7 @@
     "build": "tsc",
     "format": "prettier --write **/*.ts",
     "exec": "node dist/index.js",
-    "pack": "tsc & ncc build --source-map --license license -o dist"
+    "pack": "tsc && ncc build --source-map --license license -o dist"
   },
   "repository": {
     "type": "git",
