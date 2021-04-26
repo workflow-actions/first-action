@@ -4,11 +4,25 @@ on:
   push:
     branches: [$default-branch]
   workflow_dispatch:
+    inputs:
+      releaseIt:
+        description: Release code or not
+        required: true
+        default: false
 
 jobs:
   draft-a-release:
     runs-on: ubuntu-latest
     steps:
-      - uses: release-drafter/release-drafter@v5.15.0
+
+      - name: release-draft
+        uses: release-drafter/release-drafter@v5.15.0
+        id: release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: check-version
+        run: |
+          echo "release it: ${{ github.event.inputs.releaseIt }}"
+          echo "name: $(steps.release.outputs.name)"
+          echo "tag: $(steps.release.outputs.tag_name)"
