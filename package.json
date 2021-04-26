@@ -9,9 +9,10 @@
     "lint": "eslint src/**/*.ts",
     "format-check": "prettier --check '**/*.ts'",
     "trash": "&& ncc build lib/main.js",
-    "build": "tsc && ncc build -o dist",
+    "build": "tsc && ncc build",
     "format": "prettier --write **/*.ts",
-    "exec": "node lib/index.js"
+    "exec": "node dist/index.js",
+    "package": "ncc build --source-map --license license -o dist"
   },
   "repository": {
     "type": "git",
