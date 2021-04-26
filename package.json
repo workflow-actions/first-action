@@ -4,7 +4,8 @@
   "description": "Create first github action",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:unit": "jest unit",
+    "test": "npm run test:unit",
     "lint": "eslint src/**/*.ts",
     "format-check": "prettier --check '**/*.ts'",
     "trash": "&& ncc build lib/main.js",

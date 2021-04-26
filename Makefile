@@ -28,3 +28,6 @@ build: ## Run build
 # run: build
 run: ## Run action locally
 	@npm run exec
+
+test: ## Run tests
+	@npm run test
