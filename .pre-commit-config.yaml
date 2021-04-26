@@ -23,6 +23,7 @@ repos:
   - id: detect-private-key
   - id: double-quote-string-fixer
   - id: end-of-file-fixer
+    exclude: ^dist/
   - id: fix-byte-order-marker
   - id: fix-encoding-pragma
   - id: mixed-line-ending
@@ -33,6 +34,7 @@ repos:
   - id: requirements-txt-fixer
   - id: sort-simple-yaml
   - id: trailing-whitespace
+    exclude: ^dist/
 - repo: https://github.com/smian/pre-commit-makefile.git
   rev: 261f8fb4b31dfdc05d1a1d7fbde1f1462ecde66d
   hooks:

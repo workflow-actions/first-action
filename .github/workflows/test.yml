@@ -33,11 +33,10 @@ jobs:
       - run: |
           npm run pack
 
-  test: # make sure the action works on a clean machine without building
+  test: # make sure the action works on a clean machine with(out) building
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
       - uses: ./
         with:
           name: world
