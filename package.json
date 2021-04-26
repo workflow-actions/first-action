@@ -8,11 +8,10 @@
     "test": "npm run test:unit",
     "lint": "eslint src/**/*.ts",
     "format-check": "prettier --check '**/*.ts'",
-    "trash": "&& ncc build lib/main.js",
-    "build": "tsc && ncc build",
+    "build": "tsc",
     "format": "prettier --write **/*.ts",
     "exec": "node dist/index.js",
-    "package": "ncc build --source-map --license license -o dist"
+    "pack": "tsc & ncc build --source-map --license license -o dist"
   },
   "repository": {
     "type": "git",
