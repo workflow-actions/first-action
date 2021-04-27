@@ -40,6 +40,12 @@ jobs:
     steps:
 
       - uses: actions/checkout@v2
-      - uses: ./
+
+      - name: run-action
+        uses: ./
+        id: run_action
         with:
           name: world
+
+      - name: log-action-output
+        run: echo ${{steps.run_action.outputs.my_output}}
