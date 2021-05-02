@@ -16,7 +16,6 @@ describe('inputs unit tests', () => {
   test('test input runs', () => {
     const inputs = new Input().inputs
     const actual = inputs.name.value
-    console.log(actual)
     expect(actual).toBeDefined()
     expect(actual).toStrictEqual('action')
   })

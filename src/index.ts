@@ -6,7 +6,6 @@ async function run(): Promise<void> {
   try {
     const inputs = new Input().inputs
     core.info(`Inputs: ${inspect(inputs)}`)
-    console.log(`From console  ${inspect(inputs)}`)
     const name: string = inputs.name.value
 
     if (name) {
@@ -23,4 +22,6 @@ async function run(): Promise<void> {
   }
 }
 
-run().catch((error) => core.setFailed('Workflow failed! ' + error.message)).then((r) => r)
+run()
+  .then(() => { })
+  .catch((error) => core.setFailed('Workflow failed! ' + error.message))

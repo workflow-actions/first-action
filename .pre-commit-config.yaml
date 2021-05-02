@@ -10,6 +10,7 @@ repos:
   - id: check-docstring-first
   - id: check-executables-have-shebangs
   - id: check-json
+    exclude: ^tsconfig.json
   - id: check-merge-conflict
   - id: check-symlinks
   - id: check-toml
@@ -32,6 +33,7 @@ repos:
     # files: ^tests/
   - id: pretty-format-json
     args: ['--autofix', '--no-sort-keys', '--indent=2']
+    exclude: ^tsconfig.json
   - id: requirements-txt-fixer
   - id: sort-simple-yaml
   - id: trailing-whitespace

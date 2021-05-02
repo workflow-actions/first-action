@@ -18,8 +18,11 @@
     "url": "git+https://github.com/workflow-actions/first-action.git"
   },
   "keywords": [
+    "github",
     "action",
-    "github-actions"
+    "github-actions",
+    "typescript",
+    "nodejs"
   ],
   "author": "${REPO_OWNER_DISPLAY_NAME}",
   "license": "ISC",
